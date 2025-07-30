@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulation Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulation Result</h1>
+        <p><strong>Pressure Level:</strong> {{ pressure }}</p>
+        <p><strong>Speed:</strong> {{ speed }}</p>
+
+        <h2>Generated Pressure Waveform</h2>
+        <img src="{{ url_for('static', filename='plot.png') }}" alt="Pressure Waveform" class="waveform-img">
+
+        <br><br>
+        <a href="{{ url_for('index') }}" class="btn">Run Another Simulation</a>
+    </div>
+</body>
+</html>
+

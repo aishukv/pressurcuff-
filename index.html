@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pressure Cuff Simulation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Pressure Cuff Simulation</h1>
+        <form method="POST" action="/simulate">
+            <label for="pressure">Select Pressure Level:</label>
+            <select name="pressure" required>
+                <option value="">-- Choose --</option>
+                <option value="Light">Light</option>
+                <option value="Medium">Medium</option>
+                <option value="Deep">Deep</option>
+            </select>
+
+            <label for="speed">Select Speed:</label>
+            <select name="speed" required>
+                <option value="">-- Choose --</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="Fast">Fast</option>
+            </select>
+
+            <button type="submit">Simulate</button>
+        </form>
+    </div>
+</body>
+</html>
+
